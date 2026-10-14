@@ -10,7 +10,7 @@ jobs:
   formatting-check:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
       - name: Run clang-format style check
         uses: jidicula/clang-format-action@v4.11.0
         with:
@@ -23,7 +23,7 @@ jobs:
     container:
       image: yanetplatform/builder-lite
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
         with:
           submodules: recursive
       - name: Install CMake
@@ -45,7 +45,7 @@ jobs:
     container:
       image: yanetplatform/builder-lite
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
         with:
           submodules: recursive
       - name: Install CMake
@@ -68,7 +68,7 @@ jobs:
     container:
       image: yanetplatform/builder-lite
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
         with:
           submodules: recursive
       - name: Install CMake
@@ -98,7 +98,7 @@ jobs:
     container:
       image: yanetplatform/builder-lite
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
         with:
           submodules: recursive
       - uses: actions/download-artifact@v4

@@ -33,7 +33,7 @@ jobs:
           meson compile -C build_unittest
       - name: bug https://github.com/actions/upload-artifact/issues/38
         run: tar -cvzf build_unittest.tar.gz build_unittest
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: build_unittest
           path: build_unittest.tar.gz
@@ -56,7 +56,7 @@ jobs:
       - run: meson install -C build_autotest
       - name: bug https://github.com/actions/upload-artifact/issues/38
         run: tar -C /target_autotest -cvzf target_autotest.tar.gz ./
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: target_autotest
           path: target_autotest.tar.gz

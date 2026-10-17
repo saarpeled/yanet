@@ -1,4 +1,4 @@
-FROM ubuntu:18.04 AS base
+FROM ubuntu:26.04 AS base
 
 RUN apt-get update && apt-get upgrade -y
 
@@ -53,7 +53,7 @@ RUN make -j
 RUN make prefix=/target install
 
 
-FROM ubuntu:18.04
+FROM ubuntu:26.04
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \

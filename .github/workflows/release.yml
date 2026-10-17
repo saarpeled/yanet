@@ -34,7 +34,7 @@ jobs:
           echo YANET_VERSION_REVISION=${YANET_SUBVERSIONS[2]:=0} >>$GITHUB_ENV
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: yanetplatform/yanet
       - name: Log in to Docker Hub
@@ -60,7 +60,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
       - name: Docker meta announcer
         id: meta-announcer
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: yanetplatform/yanet-announcer
       - name: Build and push Docker image for yanet-announcer

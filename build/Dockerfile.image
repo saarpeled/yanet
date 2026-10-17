@@ -1,5 +1,5 @@
 ARG BUILD_PLATFORM=linux/amd64
-ARG RELEASE=24.04
+ARG RELEASE=26.04
 FROM --platform=${BUILD_PLATFORM} ubuntu:${RELEASE} AS environment
 
 RUN apt-get update
